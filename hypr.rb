@@ -7,7 +7,7 @@ class Hypr < Formula
 
   def install
     ENV.deparallelize
-    system "swift", "build", "-c", "release"
+    system "swift", "build", "-c", "release", "--disable-sandbox"
     system "codesign", "-fs", "-", "#{buildpath}/.build/release/hypr"
     bin.install "#{buildpath}/.build/release/hypr"
   end
