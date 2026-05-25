@@ -1,8 +1,8 @@
 class Hypr < Formula
   desc "Tiny Hyper key daemon"
   homepage "https://github.com/ElliottH/hypr"
-  version "0.0.5"
-  sha256 "e904157820da538f575bc5963787e93b5973ab64853195e2adb7d9535a38a4a9"
+  version "1.0.0"
+  sha256 "b904ea2399de3ce09083a7f44b24fd9c7defeb8f4ca3dd8bad2a372eff216ba7"
   url "https://github.com/ElliottH/hypr/releases/download/#{version}/hypr-#{version}-macos.zip"
   license "MIT"
 
