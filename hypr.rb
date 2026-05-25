@@ -1,17 +1,16 @@
 class Hypr < Formula
   desc "Tiny Hyper key daemon"
   homepage "https://github.com/ElliottH/hypr"
-  url "https://github.com/ElliottH/hypr/archive/refs/tags/0.0.3.zip"
-  sha256 "c99cd0c39e836dd3ce82cd54f85a37a5e291dde9e15e31c95af8d581ed2c9504"
+  url "https://github.com/ElliottH/hypr/releases/download/#{version}/hypr-#{version}-macos.zip"
   license "MIT"
+  version "0.0.4"
+  sha256 "9b110ff5a4c23bc5e0ac78acd787fc6ed55ec79cd68d44af22164dcdf1d663f3"
 
-  depends_on xcode: ["15.2", :build]
   depends_on :macos
-  depends_on macos: :sonoma
+  depends_on macos: :big_sur
 
   def install
-    system "swift", "build", "--disable-sandbox", "-c", "release", "--static-swift-stdlib"
-    bin.install "#{buildpath}/.build/release/hypr"
+    bin.install "hypr"
   end
 
   service do
